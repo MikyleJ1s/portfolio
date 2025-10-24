@@ -426,7 +426,7 @@ svg {
         </div>
                 <h1 style="font-size: 15vw; margin-block: 0;font-weight: bolder;">Devel<a class="jump">o</a>per</h1>       
 
-          
+          <h2 id='test'>hi</h2>
         <h3 style="padding-inline: 1vw; line-height: 45px;">Mikyle Jones <span style="color: var(--accent-color);">&#x2022;</span> Cape Town, South Africa</h3>
 
 </section>
@@ -743,8 +743,9 @@ svg {
             myvid.forEach(vid => {
               vid.play();
               vid.style.opacity = 1;
-                alert("hi)
-            })
+            });
+
+            document.getElementById('test').innerHTML = `hello`
         }
 },10)
 
@@ -974,6 +975,7 @@ const intervalId = setInterval(gettiny, 1000);
     </script>
 
 </html>
+
 
 
 
