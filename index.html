@@ -4,6 +4,75 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
+
+/* if device has a touch screen */
+@media (any-pointer: coarse) {
+    /* do your own styles */
+    .cursor, .inner, .outer {
+        display: none; 
+    }
+
+    #hidden-image {
+      filter: blur(0);
+      opacity: 1;
+    }
+}
+
+/* if device has no touch screen */
+@media (any-pointer: fine) {
+    /* do your own styles */
+        .cursor {
+            border-radius: 100%;
+            width: 10px;
+            aspect-ratio: 1;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .cursor.hover{
+            transform: translate(-50%, -50%) scale(4) ;
+            transition: transform 250ms ease-in-out;
+
+        }
+        .cursor.clicked {
+            background: red;
+        }
+
+        .outer {
+            border: 0.5px solid var(--accent-color);
+        }
+        .inner {
+            background: var(--accent-color);
+            transition: 250ms ease-out;
+        }
+
+        .inner.hover {
+            background: var(--accent-color);
+            mix-blend-mode:soft-light;
+        }
+
+    #hidden-image {
+      filter: blur(1px);
+      opacity: 0.5;
+    }
+
+      @media(min-width: 20rem) {
+    .cards__item{width: 100%;}
+  }
+  @media(min-width: 40rem) {
+    .cards__item{width: 45%;}
+  }
+
+    @media(min-width: 30rem) {
+    .card-item{width: 100%;}
+  }
+  @media(min-width: 60rem) {
+    .card-item{width: 30%;}
+  }
+
+}
         * {
               -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -78,37 +147,7 @@
     transform: scale(1.2) rotate(10deg);
 
 }
-        .cursor {
-            border-radius: 100%;
-            width: 10px;
-            aspect-ratio: 1;
-            transform: translate(-50%,-50%);
-            position: absolute;
-            pointer-events: none;
-            z-index: 10;
-        }
 
-        .cursor.hover{
-            transform: translate(-50%, -50%) scale(4) ;
-            transition: transform 250ms ease-in-out;
-
-        }
-        .cursor.clicked {
-            background: red;
-        }
-
-        .outer {
-            border: 0.5px solid var(--accent-color);
-        }
-        .inner {
-            background: var(--accent-color);
-            transition: 250ms ease-out;
-        }
-
-        .inner.hover {
-            background: var(--accent-color);
-            mix-blend-mode:soft-light;
-        }
 .rotating-text p {
     display: inline-flex;
     vertical-align: top;
@@ -139,48 +178,6 @@
 .rotating-text p .word .letter.behind {
     transform: rotateX(-90deg);
 }
-
-/* if device has a touch screen */
-@media (any-pointer: coarse) {
-    /* do your own styles */
-    .cursor {
-        display: none; 
-    }
-
-    #hidden-image {
-      filter: blur(0);
-      opacity: 1;
-    }
-}
-
-/* if device has no touch screen */
-@media (any-pointer: fine) {
-    /* do your own styles */
-    .cursor {
-        display: block; 
-    }
-
-    #hidden-image {
-      filter: blur(1px);
-      opacity: 0.5;
-    }
-
-      @media(min-width: 20rem) {
-    .cards__item{width: 100%;}
-  }
-  @media(min-width: 40rem) {
-    .cards__item{width: 45%;}
-  }
-
-    @media(min-width: 30rem) {
-    .card-item{width: 100%;}
-  }
-  @media(min-width: 60rem) {
-    .card-item{width: 30%;}
-  }
-
-}
-
 
 body {
   height: 100vh;
