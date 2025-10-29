@@ -5,6 +5,8 @@
                     <link rel="icon" type="image/gif" href="https://img.icons8.com/?size=100&id=19293&format=png&color=000000">
     </head>
     <style>
+
+      
 /* if device has no touch screen */
 @media not (any-pointer: coarse) {
     /* do your own styles */
@@ -138,15 +140,14 @@
         .side-menu {
             position: fixed;
             left: 50%;
-            bottom: 20px;
+            top: 20px;
             display: flex;
             justify-content: center;
             gap: 2px;
             transform: translateX(-50%);
             margin: 0;
+            background: var(--theme-color);
             z-index: 3;
-            background: red;
-            
         }
 
         .side-menu > a {
@@ -859,6 +860,7 @@ svg {
             })
         })
       }
+
         function changetheme(){
             var element = document.body;
             element.classList.toggle("dark-mode")
@@ -874,7 +876,13 @@ svg {
             }
         }
 
-        changetheme()
+        changetheme();
+
+
+        const prefers_the_darkness = window.matchMedia("(prefers-color-scheme: dark)");
+        if (prefers_the_darkness.matches){
+          changetheme()
+        }
 
         var muted = true;
 
@@ -1042,8 +1050,6 @@ window.onload = function () {
 
     </script>
 </html>
-
-
 
 
 
