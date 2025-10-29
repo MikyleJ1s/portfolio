@@ -5,7 +5,7 @@
     </head>
     <style>
 /* if device has no touch screen */
-@media (any-pointer: fine) {
+@media not (any-pointer: coarse) {
     /* do your own styles */
         .cursor {
             border-radius: 100%;
@@ -1017,6 +1017,7 @@ window.onload = function () {
 
     </script>
 </html>
+
 
 
 
