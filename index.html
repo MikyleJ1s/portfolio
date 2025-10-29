@@ -125,6 +125,10 @@
     .card-item{width: 100%;}
   }
 
+    .hero-image {
+    position:relative;
+  }
+
         .side-menu .active {
     border: 1px solid var(--accent-color);
     padding: 12px;
@@ -132,15 +136,15 @@
 
         .side-menu {
             position: fixed;
-            left: 0;
+            left: 50%;
             bottom: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            width: 100vw;
+            gap: 2px;
+            transform: translateX(-50%);
             margin: 0;
             background: var(--theme-color);
-            padding: 3%;
+            
         }
 
         .side-menu > a {
@@ -234,6 +238,7 @@
 }
 
 body {
+  margin: 0;
   height: 100vh;
   overflow: hidden;
   backdrop-filter: blur(8px);
@@ -703,7 +708,7 @@ svg {
     </ul>
   </section>
 </div>
-         <div id="info-box" style="position: absolute; background: var(--secondary-color); padding: 12px; border-radius: 5px; color: var(--accent-color);"></div>
+         <div id="info-box" style="position: absolute; background: var(--secondary-color); padding: 12px; border-radius: 5px; color: var(--accent-color);display: none;"></div>
 
      <audio id="clickSound" src="pop-cartoon-328167.mp3" preload="auto"></audio>
 
@@ -1017,7 +1022,6 @@ window.onload = function () {
 
     </script>
 </html>
-
 
 
 
