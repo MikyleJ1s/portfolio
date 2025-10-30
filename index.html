@@ -79,6 +79,10 @@
     padding: 12px;
 }
 
+.side-menu .active svg {
+  stroke: var(--accent-color);
+}
+
         .side-menu {
             position: fixed;
             left: 0;
@@ -148,17 +152,17 @@
 }
 
 .side-menu svg, .top-menu svg {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
 
         .side-menu {
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
             position: fixed;
             left: 50%;
             top: 95svh;
-            display: flex;
-            justify-content: center;
-            gap: 18px;
             transform: translateX(-50%);
             margin: 0;
             background: var(--theme-color);
@@ -169,6 +173,10 @@
             transition: 1s;
             top: 0
         }
+
+        .side-menu .active svg {
+  stroke: var(--accent-color);
+}
 }
 
 
@@ -1069,11 +1077,3 @@ window.onload = function () {
 
     </script>
 </html>
-
-
-
-
-
-
-
-
