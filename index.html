@@ -63,6 +63,10 @@
     .card-item{width: 30%;}
   }
 
+  .cards {
+    gap: 10px
+  }
+
   .hero-image {
     position:absolute;
     top: 65%;
@@ -130,16 +134,20 @@
 
           @media(min-width: 20rem) {
     .cards__item{width: 100%;}
+    .cards {gap: 32px}
   }
   @media(min-width: 40rem) {
     .cards__item{width: 100%;}
+     .cards {gap: 32px}
   }
 
     @media(min-width: 30rem) {
     .card-item{width: 100%;}
+     .cards {gap: 32px}
   }
   @media(min-width: 60rem) {
     .card-item{width: 100%;}
+     .cards {gap: 32px}
   }
 
     .hero-image {
@@ -409,8 +417,6 @@ opacity: 1;
   margin: 0;
   padding: 0;
   justify-content: space-between;
-  gap: 10px;
-
 }
 
 .cards__item {
